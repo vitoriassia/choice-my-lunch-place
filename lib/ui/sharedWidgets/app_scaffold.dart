@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../constants.dart';
 
-class CoWorkingScaffold extends StatelessWidget {
+class AppScaffold extends StatelessWidget {
   final Widget body;
   final List<Widget> children;
   final String screen;
   final bool buttonFloat;
   final functionFloat;
-  const CoWorkingScaffold(
+  const AppScaffold(
       {Key key,
       this.body,
       this.screen,
