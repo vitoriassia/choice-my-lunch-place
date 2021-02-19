@@ -1,4 +1,5 @@
 import 'package:choicemylunchplace/constants.dart';
+import 'package:choicemylunchplace/ui/screens/choice_place/choice_place_screen.dart';
 import 'package:choicemylunchplace/ui/sharedWidgets/app_scaffold.dart';
 import 'package:choicemylunchplace/ui/sharedWidgets/sweet_button.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,9 @@ class HomeScreen extends StatelessWidget {
                     text: 'Escolher lugar',
                     color: kPrimaryColor,
                     textcolor: kSecondColor,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, ChoiceSeatScreen.id);
+                    },
                   ),
                 ],
               ),

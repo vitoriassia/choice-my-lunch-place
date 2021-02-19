@@ -1,3 +1,4 @@
+import 'package:choicemylunchplace/constants.dart';
 import 'package:flutter/material.dart';
 
 class SweetButton extends StatelessWidget {
@@ -19,8 +20,8 @@ class SweetButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RaisedButton(
       elevation: 8,
-      color: color ?? Colors.white,
-      textColor: textcolor ?? Colors.red[700],
+      color: color ?? kPrimaryColor,
+      textColor: textcolor ?? kSecondColor,
       onPressed: onPressed,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

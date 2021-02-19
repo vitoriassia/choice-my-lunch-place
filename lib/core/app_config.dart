@@ -1,5 +1,6 @@
 import 'package:choicemylunchplace/constants.dart';
 import 'package:choicemylunchplace/stores/choice_seat_store.dart';
+import 'package:choicemylunchplace/ui/screens/choice_place/choice_place_screen.dart';
 import 'package:choicemylunchplace/ui/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -9,6 +10,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 class AppConfig {
   static Map<String, WidgetBuilder> routes = {
     HomeScreen.id: (context) => HomeScreen(),
+    ChoiceSeatScreen.id: (context) => ChoiceSeatScreen(),
   };
 
   static List<SingleChildWidget> providers = [
