@@ -1,16 +1,13 @@
-# choicemylunchplace
+# Choice my lunch place
 
-A new Flutter project.
+App simples de escolha de lugar.
 
-## Getting Started
+## Tela Inicial: 
 
-This project is a starting point for a Flutter application.
+![Tela Inicial](https://github.com/vitoriassia/dado-Flutter/blob/master/assets/escolher-lugar.jpeg)
 
-A few resources to get you started if this is your first Flutter project:
+## Escolha os lugares:
+![Segunda Tela](https://github.com/vitoriassia/dado-Flutter/blob/master/assets/primeira-tela.jpeg)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Sucesso! Reserva realizada:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
