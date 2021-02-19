@@ -24,7 +24,6 @@ class AppScaffold extends StatelessWidget {
         DefaultTabController(
           length: 7,
           child: Scaffold(
-            backgroundColor: kAppGrey,
             floatingActionButton: buttonFloat != null
                 ? Container(
                     height: 55,
@@ -43,7 +42,13 @@ class AppScaffold extends StatelessWidget {
                 color: Colors.white,
               ),
               backgroundColor: kPrimaryColor,
-              title: Text(' Bem vindo'),
+              title: Text(
+                'Choice Lunch Place',
+                style: TextStyle(
+                    color: kSecondColor,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
               actions: <Widget>[],
             ),
             body: Container(
