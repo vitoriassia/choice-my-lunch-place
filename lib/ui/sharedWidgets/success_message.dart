@@ -47,7 +47,7 @@ class _SuccessAlertDialogState extends State<SuccessAlertDialog>
                 style: kAppTitleBlack.copyWith(color: kPrimaryColor),
               ),
               SizedBox(
-                height: 20,
+                height: 70,
               ),
               SweetButton(
                 text: 'Voltar',
