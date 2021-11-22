@@ -50,8 +50,8 @@ getWigetIcon(SeatModel seat, context, table) {
     case StatusSeat.Available:
       return iconAvailableSeat(() {
         seat.isSelect = !seat.isSelect;
-        Provider.of<ChoiceSeatStore>(context, listen: false)
-            .setSeatListisSelect(seat, table);
+        // Provider.of<ChoiceSeatStore>(context, listen: false)
+        //     .setSeatListisSelect(seat, table);
       }, seat.isSelect);
       break;
     default:

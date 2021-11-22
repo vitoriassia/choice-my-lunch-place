@@ -3,6 +3,7 @@ import 'package:choicemylunchplace/app/shared/widgets/app_scaffold.dart';
 import 'package:choicemylunchplace/app/core/constants.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -46,7 +47,7 @@ class HomePage extends StatelessWidget {
                     color: kPrimaryColor,
                     textcolor: kSecondColor,
                     onPressed: () {
-                      // Navigator.pushNamed(context, ChoiceSeatScreen.id);
+                      Modular.to.pushNamed('/choice_place/');
                     },
                   ),
                 ],

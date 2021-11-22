@@ -2,6 +2,7 @@ import 'package:choicemylunchplace/app/shared/widgets/sweet_button.dart';
 import 'package:choicemylunchplace/app/core/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gifimage/flutter_gifimage.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class SuccessAlertDialog extends StatefulWidget {
   @override
@@ -53,8 +54,7 @@ class _SuccessAlertDialogState extends State<SuccessAlertDialog>
                 textcolor: kSecondColor,
                 color: kPrimaryColor,
                 onPressed: () {
-                  // Navigator.pushNamedAndRemoveUntil(
-                  //     context, HomeScreen.id, (route) => false);
+                  Modular.to.navigate('/home/');
                 },
               )
             ],
