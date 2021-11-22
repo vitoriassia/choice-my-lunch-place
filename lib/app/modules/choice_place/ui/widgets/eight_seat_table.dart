@@ -1,16 +1,20 @@
+import 'package:choicemylunchplace/app/core/models/seat_model.dart';
+import 'package:choicemylunchplace/app/modules/choice_place/store/choice_place_store.dart';
 import 'package:choicemylunchplace/app/modules/choice_place/ui/widgets/detail_chair_container.dart';
 import 'package:choicemylunchplace/app/modules/choice_place/ui/widgets/icon_info_chair.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import 'chair_container.dart';
 
 class EightSeatTableContainer extends StatelessWidget {
   final int numberTable;
   EightSeatTableContainer(this.numberTable);
+  final choicePlaceStore = Modular.get<ChoicePlaceStore>();
+
   @override
   Widget build(BuildContext context) {
-    // List<SeatModel> listSeat =
-    //     Provider.of<ChoiceSeatStore>(context).listTable[numberTable];
+    List<SeatModel> listSeat = choicePlaceStore.listOfPlace[numberTable];
     return Container(
       width: 150,
       child: Stack(
@@ -49,27 +53,27 @@ class EightSeatTableContainer extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // Container(
-                  //     width: 200 * 0.20,
-                  //     padding: EdgeInsets.only(top: 10, bottom: 10),
-                  //     child: Column(
-                  //       children: iconInfoChair(
-                  //           listSeat.sublist(0, 4), context, numberTable),
-                  //     )),
+                  Container(
+                      width: 200 * 0.20,
+                      padding: EdgeInsets.only(top: 10, bottom: 10),
+                      child: Column(
+                        children: iconInfoChair(
+                            listSeat.sublist(0, 4), context, numberTable),
+                      )),
                   Container(
                       height: 180,
                       child: VerticalDivider(
                         color: Colors.black,
                         thickness: 2,
                       )),
-                  // Container(
-                  //   padding: EdgeInsets.only(top: 10, bottom: 10),
-                  //   width: 200 * 0.20,
-                  //   child: Column(
-                  //     children: iconInfoChair(
-                  //         listSeat.sublist(4, 8), context, numberTable),
-                  //   ),
-                  // )
+                  Container(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    width: 200 * 0.20,
+                    child: Column(
+                      children: iconInfoChair(
+                          listSeat.sublist(4, 8), context, numberTable),
+                    ),
+                  )
                 ],
               ),
             ),
