@@ -1,4 +1,4 @@
-import 'package:choicemylunchplace/constants.dart';
+import 'package:choicemylunchplace/app/core/constants.dart';
 import 'package:flutter/material.dart';
 
 class SweetButton extends StatelessWidget {

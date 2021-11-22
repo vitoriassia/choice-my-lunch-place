@@ -1,9 +1,9 @@
-import 'package:choicemylunchplace/constants.dart';
+import 'package:choicemylunchplace/app/modules/choice_place/ui/widgets/eight_seat_table.dart';
+import 'package:choicemylunchplace/app/shared/widgets/app_scaffold.dart';
+import 'package:choicemylunchplace/app/shared/widgets/success_message.dart';
+import 'package:choicemylunchplace/app/shared/widgets/sweet_button.dart';
+import 'package:choicemylunchplace/app/core/constants.dart';
 import 'package:choicemylunchplace/stores/choice_seat_store.dart';
-import 'package:choicemylunchplace/ui/screens/choice_place/widgets/eight_seat_table.dart';
-import 'package:choicemylunchplace/ui/sharedWidgets/app_scaffold.dart';
-import 'package:choicemylunchplace/ui/sharedWidgets/success_message.dart';
-import 'package:choicemylunchplace/ui/sharedWidgets/sweet_button.dart';
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';

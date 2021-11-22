@@ -1,11 +1,10 @@
-import 'package:choicemylunchplace/constants.dart';
-import 'package:choicemylunchplace/ui/screens/choice_place/choice_place_screen.dart';
-import 'package:choicemylunchplace/ui/sharedWidgets/app_scaffold.dart';
-import 'package:choicemylunchplace/ui/sharedWidgets/sweet_button.dart';
+import 'package:choicemylunchplace/app/shared/widgets/sweet_button.dart';
+import 'package:choicemylunchplace/app/shared/widgets/app_scaffold.dart';
+import 'package:choicemylunchplace/app/core/constants.dart';
+
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  static const String id = 'home_screen';
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
@@ -47,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                     color: kPrimaryColor,
                     textcolor: kSecondColor,
                     onPressed: () {
-                      Navigator.pushNamed(context, ChoiceSeatScreen.id);
+                      // Navigator.pushNamed(context, ChoiceSeatScreen.id);
                     },
                   ),
                 ],

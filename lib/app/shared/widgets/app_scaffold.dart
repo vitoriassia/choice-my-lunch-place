@@ -1,6 +1,5 @@
+import 'package:choicemylunchplace/app/core/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../../constants.dart';
 
 class AppScaffold extends StatelessWidget {
   final Widget body;

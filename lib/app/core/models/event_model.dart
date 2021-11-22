@@ -1,4 +1,4 @@
-import 'package:choicemylunchplace/models/place_lunch_model.dart';
+import 'package:choicemylunchplace/app/core/models/place_lunch_model.dart';
 import 'package:flutter/material.dart';
 import 'package:choicemylunchplace/extensions/date.dart';
 

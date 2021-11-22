@@ -1,4 +1,4 @@
-import '../enums.dart';
+import 'package:choicemylunchplace/app/core/enums.dart';
 
 class SeatModel {
   int id;

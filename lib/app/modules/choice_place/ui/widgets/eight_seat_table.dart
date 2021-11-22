@@ -1,7 +1,7 @@
-import 'package:choicemylunchplace/models/seat_model.dart';
+import 'package:choicemylunchplace/app/modules/choice_place/ui/widgets/detail_chair_container.dart';
+import 'package:choicemylunchplace/app/modules/choice_place/ui/widgets/icon_info_chair.dart';
+import 'package:choicemylunchplace/app/core/models/seat_model.dart';
 import 'package:choicemylunchplace/stores/choice_seat_store.dart';
-import 'package:choicemylunchplace/ui/screens/choice_place/widgets/detail_chair_container.dart';
-import 'package:choicemylunchplace/ui/screens/choice_place/widgets/icon_info_chair.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

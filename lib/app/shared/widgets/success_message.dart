@@ -1,6 +1,5 @@
-import 'package:choicemylunchplace/constants.dart';
-import 'package:choicemylunchplace/ui/screens/home_screen/home_screen.dart';
-import 'package:choicemylunchplace/ui/sharedWidgets/sweet_button.dart';
+import 'package:choicemylunchplace/app/shared/widgets/sweet_button.dart';
+import 'package:choicemylunchplace/app/core/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gifimage/flutter_gifimage.dart';
 
@@ -54,8 +53,8 @@ class _SuccessAlertDialogState extends State<SuccessAlertDialog>
                 textcolor: kSecondColor,
                 color: kPrimaryColor,
                 onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, HomeScreen.id, (route) => false);
+                  // Navigator.pushNamedAndRemoveUntil(
+                  //     context, HomeScreen.id, (route) => false);
                 },
               )
             ],

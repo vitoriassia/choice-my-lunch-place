@@ -1,12 +1,11 @@
-import 'package:choicemylunchplace/constants.dart';
-import 'package:choicemylunchplace/models/seat_model.dart';
+import 'package:choicemylunchplace/app/modules/choice_place/ui/widgets/available_icon.dart';
+import 'package:choicemylunchplace/app/core/constants.dart';
+import 'package:choicemylunchplace/app/core/enums.dart';
+import 'package:choicemylunchplace/app/core/models/seat_model.dart';
 import 'package:choicemylunchplace/stores/choice_seat_store.dart';
-import 'package:choicemylunchplace/ui/screens/choice_place/widgets/available_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
-
-import '../../../../enums.dart';
 
 List<Widget> iconInfoChair(List<SeatModel> sitModel, context, table) {
   List<Widget> listIcons = [];

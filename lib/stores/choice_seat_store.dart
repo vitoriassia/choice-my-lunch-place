@@ -1,7 +1,7 @@
-import 'package:choicemylunchplace/enums.dart';
-import 'package:choicemylunchplace/models/event_model.dart';
-import 'package:choicemylunchplace/models/place_lunch_model.dart';
-import 'package:choicemylunchplace/models/seat_model.dart';
+import 'package:choicemylunchplace/app/core/enums.dart';
+import 'package:choicemylunchplace/app/core/models/event_model.dart';
+import 'package:choicemylunchplace/app/core/models/place_lunch_model.dart';
+import 'package:choicemylunchplace/app/core/models/seat_model.dart';
 import 'package:choicemylunchplace/utils/mergeDateandTimeToDateTime.dart';
 import 'package:flutter/material.dart';
 

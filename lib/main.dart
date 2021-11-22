@@ -1,28 +1,12 @@
-import 'package:choicemylunchplace/core/app_config.dart';
-import 'package:choicemylunchplace/ui/screens/home_screen/home_screen.dart';
+import 'package:choicemylunchplace/app/app_module.dart';
+import 'package:choicemylunchplace/app/app_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'dart:developer' as developer;
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: AppConfig.providers,
-      child: MaterialApp(
-        localizationsDelegates: AppConfig.localizationsDelegates,
-        supportedLocales: AppConfig.supportedLocales,
-        routes: AppConfig.routes,
-        title: AppConfig.kAppTitle,
-        theme: AppConfig.defaultThemeData,
-        onGenerateRoute: (RouteSettings settings) {
-          return MaterialPageRoute(builder: (_) => HomeScreen());
-        },
-      ),
-    );
-  }
+void main() {
+  Modular.to.addListener(() {
+    developer.log('PATH: ${Modular.to.path}', name: 'NAVIGATION');
+  });
+  runApp(ModularApp(module: AppModule(), child: AppWidget()));
 }
