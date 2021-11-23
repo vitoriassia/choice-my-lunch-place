@@ -43,15 +43,13 @@ getWigetIcon(SeatModel seat, context, table) {
         Icons.account_circle,
         color: kPrimaryColor,
       );
-      break;
+
     case StatusSeat.Unavailable:
       return Icon(Icons.remove_circle, color: Colors.red[900]);
-      break;
     case StatusSeat.Available:
       return iconAvailableSeat(() {
         Modular.get<ChoicePlaceStore>().selectPlace(seat, table);
       }, seat.isSelect);
-      break;
     default:
   }
 }

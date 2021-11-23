@@ -18,10 +18,16 @@ class SweetButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      elevation: 8,
-      color: color ?? kPrimaryColor,
-      textColor: textcolor ?? kSecondColor,
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+          primary: color ?? kPrimaryColor,
+          elevation: 8,
+          textStyle: TextStyle(
+            color: textcolor ?? kSecondColor,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(11.0),
+          )),
       onPressed: onPressed as void Function()?,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +36,7 @@ class SweetButton extends StatelessWidget {
           icon != null ? Icon(icon) : Container(),
           SizedBox(width: 16.0),
           Text(
-            text ?? '',
+            text,
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           ),
         ],
