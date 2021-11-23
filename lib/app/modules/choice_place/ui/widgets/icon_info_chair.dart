@@ -1,9 +1,12 @@
+import 'package:choicemylunchplace/app/modules/choice_place/choice_place_module.dart';
+import 'package:choicemylunchplace/app/modules/choice_place/store/choice_place_store.dart';
 import 'package:choicemylunchplace/app/modules/choice_place/ui/widgets/available_icon.dart';
 import 'package:choicemylunchplace/app/core/constants.dart';
 import 'package:choicemylunchplace/app/core/enums.dart';
 import 'package:choicemylunchplace/app/core/models/seat_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 List<Widget> iconInfoChair(List<SeatModel> sitModel, context, table) {
   List<Widget> listIcons = [];
@@ -47,9 +50,7 @@ getWigetIcon(SeatModel seat, context, table) {
       break;
     case StatusSeat.Available:
       return iconAvailableSeat(() {
-        seat.isSelect = !seat.isSelect;
-        // Provider.of<ChoiceSeatStore>(context, listen: false)
-        //     .setSeatListisSelect(seat, table);
+        Modular.get<ChoicePlaceStore>().selectPlace(seat, table);
       }, seat.isSelect);
       break;
     default:

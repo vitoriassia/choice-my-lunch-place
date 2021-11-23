@@ -47,6 +47,14 @@ mixin _$ChoicePlaceStore on _ChoicePlaceStoreBase, Store {
     return _$loadingPlacesAsyncAction.run(() => super.loadingPlaces());
   }
 
+  final _$selectPlaceAsyncAction =
+      AsyncAction('_ChoicePlaceStoreBase.selectPlace');
+
+  @override
+  Future<void> selectPlace(SeatModel place, int table) {
+    return _$selectPlaceAsyncAction.run(() => super.selectPlace(place, table));
+  }
+
   final _$_ChoicePlaceStoreBaseActionController =
       ActionController(name: '_ChoicePlaceStoreBase');
 

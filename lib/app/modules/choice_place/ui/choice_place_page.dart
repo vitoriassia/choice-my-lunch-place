@@ -144,20 +144,6 @@ class _ChoicePlacePageState extends State<ChoicePlacePage> {
                             ),
                           ],
                         )),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SweetButton(
-                          onPressed: () async {
-                            showDialog(
-                              barrierDismissible: true,
-                              context: context,
-                              builder: (BuildContext context) {
-                                return SuccessAlertDialog();
-                              },
-                            );
-                          },
-                          text: 'Reservar'),
-                    ),
                     choicePlaceStore.isSelectSeat()
                         ? Padding(
                             padding: const EdgeInsets.all(8.0),
