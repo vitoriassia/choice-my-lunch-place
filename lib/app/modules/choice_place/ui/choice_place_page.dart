@@ -28,7 +28,12 @@ class _ChoicePlacePageState extends State<ChoicePlacePage> {
       builder: (_) {
         return AppScaffold(
           body: choicePlaceStore.loadingPlace
-              ? CircularProgressIndicator()
+              ? Center(
+                  child: LinearProgressIndicator(
+                  color: kPrimaryColor,
+                  backgroundColor: kPrimaryColor.withOpacity(0.3),
+                  minHeight: 5,
+                ))
               : Column(
                   children: [
                     Padding(

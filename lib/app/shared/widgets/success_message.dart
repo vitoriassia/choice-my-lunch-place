@@ -1,7 +1,6 @@
 import 'package:choicemylunchplace/app/shared/widgets/sweet_button.dart';
 import 'package:choicemylunchplace/app/core/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gifimage/flutter_gifimage.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class SuccessAlertDialog extends StatefulWidget {
@@ -11,13 +10,9 @@ class SuccessAlertDialog extends StatefulWidget {
 
 class _SuccessAlertDialogState extends State<SuccessAlertDialog>
     with TickerProviderStateMixin {
-  GifController controller;
-
   @override
   void initState() {
     super.initState();
-    controller = GifController(vsync: this);
-    controller.animateTo(130, duration: Duration(milliseconds: 1200));
   }
 
   @override
@@ -31,14 +26,14 @@ class _SuccessAlertDialogState extends State<SuccessAlertDialog>
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              GifImage(
-                controller: controller,
-                image: AssetImage(
-                  'assets/success-gif.gif',
-                ),
-                width: 100,
-                height: 100,
-              ),
+              // GifImage(
+              //   controller: controller,
+              //   image: AssetImage(
+              //     'assets/success-gif.gif',
+              //   ),
+              //   width: 100,
+              //   height: 100,
+              // ),
               SizedBox(
                 height: 20,
               ),

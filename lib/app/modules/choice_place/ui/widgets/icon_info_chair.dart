@@ -1,4 +1,3 @@
-import 'package:choicemylunchplace/app/modules/choice_place/choice_place_module.dart';
 import 'package:choicemylunchplace/app/modules/choice_place/store/choice_place_store.dart';
 import 'package:choicemylunchplace/app/modules/choice_place/ui/widgets/available_icon.dart';
 import 'package:choicemylunchplace/app/core/constants.dart';
