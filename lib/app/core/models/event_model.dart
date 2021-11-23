@@ -5,7 +5,7 @@ import 'package:choicemylunchplace/extensions/date.dart';
 class EventModel {
   DateTime startMeeting;
   DateTime endMeetting;
-  PlaceLunchModel placeLunchModel;
+  late PlaceLunchModel placeLunchModel;
   DateTime dateFind;
 
   EventModel(this.startMeeting, this.endMeetting, this.dateFind);

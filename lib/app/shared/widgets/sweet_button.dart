@@ -2,15 +2,15 @@ import 'package:choicemylunchplace/app/core/constants.dart';
 import 'package:flutter/material.dart';
 
 class SweetButton extends StatelessWidget {
-  final Function onPressed;
+  final Function? onPressed;
   final String text;
-  final IconData icon;
-  final Color textcolor;
-  final Color color;
+  final IconData? icon;
+  final Color? textcolor;
+  final Color? color;
   const SweetButton(
-      {Key key,
+      {Key? key,
       this.onPressed,
-      @required this.text,
+      required this.text,
       this.icon,
       this.textcolor,
       this.color})
@@ -22,7 +22,7 @@ class SweetButton extends StatelessWidget {
       elevation: 8,
       color: color ?? kPrimaryColor,
       textColor: textcolor ?? kSecondColor,
-      onPressed: onPressed,
+      onPressed: onPressed as void Function()?,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

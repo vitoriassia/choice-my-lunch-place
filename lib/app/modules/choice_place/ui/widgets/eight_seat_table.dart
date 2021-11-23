@@ -14,7 +14,7 @@ class EightSeatTableContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<SeatModel> listSeat = choicePlaceStore.listOfPlace[numberTable];
+    List<SeatModel> listSeat = choicePlaceStore.listOfPlace![numberTable];
     return Container(
       width: 150,
       child: Stack(

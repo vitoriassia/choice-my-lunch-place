@@ -2,13 +2,13 @@ import 'package:choicemylunchplace/app/core/constants.dart';
 import 'package:flutter/material.dart';
 
 class AppScaffold extends StatelessWidget {
-  final Widget body;
-  final List<Widget> children;
-  final String screen;
-  final bool buttonFloat;
+  final Widget? body;
+  final List<Widget>? children;
+  final String? screen;
+  final bool? buttonFloat;
   final functionFloat;
   const AppScaffold(
-      {Key key,
+      {Key? key,
       this.body,
       this.screen,
       this.children,

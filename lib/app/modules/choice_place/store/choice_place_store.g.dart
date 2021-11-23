@@ -27,13 +27,13 @@ mixin _$ChoicePlaceStore on _ChoicePlaceStoreBase, Store {
   final _$listOfPlaceAtom = Atom(name: '_ChoicePlaceStoreBase.listOfPlace');
 
   @override
-  List<List<SeatModel>> get listOfPlace {
+  List<List<SeatModel>>? get listOfPlace {
     _$listOfPlaceAtom.reportRead();
     return super.listOfPlace;
   }
 
   @override
-  set listOfPlace(List<List<SeatModel>> value) {
+  set listOfPlace(List<List<SeatModel>>? value) {
     _$listOfPlaceAtom.reportWrite(value, super.listOfPlace, () {
       super.listOfPlace = value;
     });

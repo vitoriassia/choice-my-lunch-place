@@ -9,8 +9,8 @@ abstract class _ChoicePlaceStoreBase with Store {
   ChoicePlaceRepository repository;
   _ChoicePlaceStoreBase(this.repository);
 
-  int selectedPlaceIndex;
-  int selectedTableIndex;
+  int? selectedPlaceIndex;
+  late int selectedTableIndex;
 
   @observable
   bool loadingPlace = true;
@@ -19,7 +19,7 @@ abstract class _ChoicePlaceStoreBase with Store {
   setLoadingPlace(bool value) => loadingPlace = value;
 
   @observable
-  List<List<SeatModel>> listOfPlace;
+  List<List<SeatModel>>? listOfPlace;
 
   @action
   Future<void> loadingPlaces() async {
@@ -31,7 +31,7 @@ abstract class _ChoicePlaceStoreBase with Store {
 
   @action
   Future<void> selectPlace(SeatModel place, int table) async {
-    int indexNewSelectedPlace = listOfPlace[table].indexOf(place);
+    int indexNewSelectedPlace = listOfPlace![table].indexOf(place);
     if (selectedPlaceIndex == null) {
       handleFirstPlaceSelect(table, indexNewSelectedPlace);
     } else if (isSamePlace(selectedPlaceIndex, indexNewSelectedPlace)) {
@@ -44,32 +44,32 @@ abstract class _ChoicePlaceStoreBase with Store {
   }
 
   void handleNewSelectPlace(int table, int indexNewSelectedPlace) {
-    listOfPlace[selectedTableIndex][selectedPlaceIndex].isSelect = false;
-    listOfPlace[table][indexNewSelectedPlace].isSelect = true;
+    listOfPlace![selectedTableIndex][selectedPlaceIndex!].isSelect = false;
+    listOfPlace![table][indexNewSelectedPlace].isSelect = true;
     selectedPlaceIndex = indexNewSelectedPlace;
   }
 
   void handleSamePlaceSelect(int table) {
-    listOfPlace[table][selectedPlaceIndex].isSelect =
-        !listOfPlace[table][selectedPlaceIndex].isSelect;
-    if (!listOfPlace[table][selectedPlaceIndex].isSelect)
+    listOfPlace![table][selectedPlaceIndex!].isSelect =
+        !listOfPlace![table][selectedPlaceIndex!].isSelect!;
+    if (!listOfPlace![table][selectedPlaceIndex!].isSelect!)
       selectedPlaceIndex = null;
   }
 
   void handleFirstPlaceSelect(int table, int indexNewSelectedPlace) {
-    listOfPlace[table][indexNewSelectedPlace].isSelect = true;
+    listOfPlace![table][indexNewSelectedPlace].isSelect = true;
     selectedPlaceIndex = indexNewSelectedPlace;
   }
 
   bool isSelectSeat() {
     bool isSelectSeat = false;
-    for (final element in listOfPlace) {
-      isSelectSeat = element.any((element) => element.isSelect);
+    for (final element in listOfPlace!) {
+      isSelectSeat = element.any((element) => element.isSelect!);
       if (isSelectSeat) break;
     }
     return isSelectSeat;
   }
 
-  bool isSamePlace(int indexSelect, int indexNewSelect) =>
+  bool isSamePlace(int? indexSelect, int indexNewSelect) =>
       indexSelect == indexNewSelect;
 }
